@@ -43,4 +43,19 @@ public class RollercoasterTest {
     public void cannotRide() {
         assertEquals(false, rollerCoaster.isAllowedTo(visitor1));
     }
+
+    @Test
+    public void canCharge() {
+        assertEquals(8.40, rollerCoaster.defaultPrice(), 0.01);
+    }
+
+    @Test
+    public void canChargeDoubleForTallPeople() {
+        assertEquals(16.80, rollerCoaster.priceFor(visitor2), 0.01);
+    }
+
+    @Test
+    public void canChargeRegularPrice() {
+        assertEquals(8.40, rollerCoaster.priceFor(visitor1), 0.01);
+    }
 }

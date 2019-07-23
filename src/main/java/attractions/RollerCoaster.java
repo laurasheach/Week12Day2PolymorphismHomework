@@ -1,9 +1,11 @@
 package attractions;
 
+import behaviours.IReviewed;
 import behaviours.ISecurity;
+import behaviours.ITicketed;
 import people.Visitor;
 
-public class RollerCoaster  extends Attraction implements ISecurity {
+public class RollerCoaster  extends Attraction implements ISecurity, IReviewed, ITicketed {
 
     private double minHeight;
     private int minAge;
@@ -20,5 +22,18 @@ public class RollerCoaster  extends Attraction implements ISecurity {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public double defaultPrice() {
+        return 8.40;
+    }
+
+    @Override
+    public double priceFor(Visitor visitor) {
+        if(visitor.getHeight() > 2.0) {
+            return 16.80;
+        }
+        return defaultPrice();
     }
 }
