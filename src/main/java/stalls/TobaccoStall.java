@@ -1,10 +1,11 @@
 package stalls;
 
+import behaviours.IEntertainment;
 import behaviours.IReviewed;
 import behaviours.ISecurity;
 import people.Visitor;
 
-public class TobaccoStall extends Stall implements ISecurity, IReviewed {
+public class TobaccoStall extends Stall implements ISecurity, IReviewed, IEntertainment {
 
     private int minAge;
 

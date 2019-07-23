@@ -1,10 +1,11 @@
 package attractions;
 
+import behaviours.IEntertainment;
 import behaviours.IReviewed;
 import behaviours.ISecurity;
 import people.Visitor;
 
-public class Playground extends Attraction implements ISecurity, IReviewed {
+public class Playground extends Attraction implements ISecurity, IReviewed, IEntertainment {
 
     private int maxAge;
 

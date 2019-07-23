@@ -1,11 +1,12 @@
 package attractions;
 
+import behaviours.IEntertainment;
 import behaviours.IReviewed;
 import behaviours.ISecurity;
 import behaviours.ITicketed;
 import people.Visitor;
 
-public class RollerCoaster  extends Attraction implements ISecurity, IReviewed, ITicketed {
+public class RollerCoaster  extends Attraction implements ISecurity, IReviewed, ITicketed, IEntertainment {
 
     private double minHeight;
     private int minAge;

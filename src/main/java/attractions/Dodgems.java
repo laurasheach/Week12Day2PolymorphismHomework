@@ -1,10 +1,11 @@
 package attractions;
 
+import behaviours.IEntertainment;
 import behaviours.IReviewed;
 import behaviours.ITicketed;
 import people.Visitor;
 
-public class Dodgems extends Attraction implements IReviewed, ITicketed {
+public class Dodgems extends Attraction implements IReviewed, ITicketed, IEntertainment {
 
     public Dodgems(String name, int rating) {
         super(name, rating);
@@ -22,4 +23,5 @@ public class Dodgems extends Attraction implements IReviewed, ITicketed {
         }
         return defaultPrice();
     }
+
 }
